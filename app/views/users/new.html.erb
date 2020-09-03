@@ -13,6 +13,15 @@
 <%= f.label :password, 'Password:' %>
 <%= f.password_field :password %>
 
+<%= f.label for='cars', 'Choose a team:' %>
+
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
 <%= f.submit 'Sign Up' %>
 
 <% end %>
