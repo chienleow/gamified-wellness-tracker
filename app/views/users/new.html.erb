@@ -13,10 +13,8 @@
     <%= f.label :password, 'Password:' %>
     <%= f.password_field :password %>
 
-    <%= f.collection_select :team_id, Team.all, :id, :name %>
-
     <%= f.label :team, 'Team:' %>
-    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :name) %>
+    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %>
 
     <%= f.submit 'Sign Up' %>
 

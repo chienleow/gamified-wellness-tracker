@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-peace_coffee = User.create(name: "Peace Coffee", description: "A bean roastery and local coffee chain that supports the Institute for Agriculture and Trade Policy.", email: "peacecoffee@gmail.com", password: "pw")
+team_a = Team.create(team_name: "Team A", team_points: "0")
+team_b = Team.create(team_name: "Team B", team_points: "0")
+team_c = Team.create(team_name: "Team C", team_points: "0")
