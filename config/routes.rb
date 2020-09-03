@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_goals
   resources :goals
   resources :users
   resources :teams
