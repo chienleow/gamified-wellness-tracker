@@ -1,27 +1,23 @@
 <h1>Sign Up</h1>
 
 <%= form_for(@user) do |f| %>
-<%= f.label :first_name, 'First Name:' %>
-<%= f.text_field :first_name %>
+    <%= f.label :first_name, 'First Name:' %>
+    <%= f.text_field :first_name %>
 
-<%= f.label :last_name, 'Last Name:' %>
-<%= f.text_field :last_name %>
+    <%= f.label :last_name, 'Last Name:' %>
+    <%= f.text_field :last_name %>
 
-<%= f.label :username, 'Username:' %>
-<%= f.text_field :username %>
+    <%= f.label :username, 'Username:' %>
+    <%= f.text_field :username %>
 
-<%= f.label :password, 'Password:' %>
-<%= f.password_field :password %>
+    <%= f.label :password, 'Password:' %>
+    <%= f.password_field :password %>
 
-<%= f.label for='cars', 'Choose a team:' %>
+    <%= f.collection_select :team_id, Team.all, :id, :name %>
 
-<select name="cars" id="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
+    <%= f.label :team, 'Team:' %>
+    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :name) %>
 
-<%= f.submit 'Sign Up' %>
+    <%= f.submit 'Sign Up' %>
 
 <% end %>
