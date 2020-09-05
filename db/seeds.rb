@@ -12,9 +12,9 @@ team_b = Team.create(team_name: "Team B")
 team_c = Team.create(team_name: "Team C")
 
 # Seeds for Goal
-physical_1 = Team.create(category: "Physical", description: "6 hours of sleep")
+physical_1 = Team.create(category: "Physical", description: "6 hours of Sleep")
 physical_2 = Team.create(category: "Physical", description: "Exercise")
-mental_1 = Team.create(category: "Mental", description: "Thankful list")
+mental_1 = Team.create(category: "Mental", description: "Thankful List")
 mental_2 = Team.create(category: "Mental", description: "Journal/Reflection")
 intellectual_1 = Team.create(category: "Intellectual", description: "Podcast")
 intellectual_2 = Team.create(category: "Intellectual", description: "Book/Article")
