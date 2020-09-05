@@ -1,0 +1,6 @@
+<h2>Choose Your Daily Goals</h2>
+
+<% @goals.each do |goal| %>
+    <%= goal.category %>
+    <%= goal.description %><br>
+<% end %>
