@@ -5,11 +5,6 @@ class SessionsController < ApplicationController
     def new
     end
 
-    def destroy
-        reset_session
-        redirect_to '/'
-    end
-
     def create
         # byebug
         @user = User.find_by(username: params[:user][:username])
@@ -20,5 +15,10 @@ class SessionsController < ApplicationController
             flash[:message] = "Login Error, please try again."
             redirect_to login_path
         end
+    end
+
+    def destroy
+        reset_session
+        redirect_to '/'
     end
 end
