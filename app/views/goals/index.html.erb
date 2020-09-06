@@ -2,7 +2,7 @@
 
 <% @goals.each do |goal| %>
     <%= form_for @usergoal do |f| %>
-        <%= f.label :goal.description %>
+        <%= goal.description %>
         <%= f.submit " " %>
     <% end %>
 <% end %>
