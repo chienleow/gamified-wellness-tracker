@@ -1,8 +1,8 @@
 <h2>Choose Your Daily Goals</h2>
 
-<%= %>
-
-
 <% @goals.each do |goal| %>
-    <%= goal.description %><br><br>
+    <%= form_for @usergoal do |f| %>
+        <%= f.label :goal.description %>
+        <%= f.submit " " %>
+    <% end %>
 <% end %>

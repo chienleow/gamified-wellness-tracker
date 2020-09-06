@@ -15,6 +15,7 @@ class GoalsController < ApplicationController
 
     def index
         @goals = Goal.all
+        @usergoal = UserGoal.new
     end
 
     private
