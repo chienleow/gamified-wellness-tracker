@@ -4,16 +4,20 @@ class UserGoalsController < ApplicationController
     def create
         @usergoal = UserGoal.new(usergoal_params)
         @usergoal.save
-        redirect_to usergoal_path(@usergoal)
+        redirect_to user_goal_path(@usergoal)
     end
 
     def index
         @usergoals = UserGoal.all
     end
+
+    def show
+        @usergoal = UserGoal.find_by_id(params[:id])
+    end
     
     private
 
         def usergoal_params
-            params.require(:usergoal).permit(:user_id, :goal_id)
+            params.permit(:user_id, :goal_id)
         end
 end
