@@ -34,6 +34,15 @@ Confirm:
 <% end %>
 
 
+# goals > index
+<% @goals.each do |goal| %>
+    <%= form_for @usergoal do |f| %>
+        <%= goal.description %>
+        <%= f.submit " " %>
+    <% end %>
+<% end %>
+
+
 
 
 # stretch goals:
