@@ -1,9 +1,17 @@
 class UserGoalsController < ApplicationController
     before_action :redirect_if_not_logged_in
 
+    def new
+        @usergoal = UserGoal.new
+    end
+
     def create
-        @usergoal = UserGoal.new(usergoal_params)
+        user_id = current_user.id
+        goal_id = params[""]["goal_id"]
+        @usergoal = UserGoal.create(user_id: user_id, goal_id: goal_id)
+        #get user_id from current_user helper
         @usergoal.save
+        byebug
         redirect_to user_goal_path(@usergoal)
     end
 
@@ -18,6 +26,6 @@ class UserGoalsController < ApplicationController
     private
 
         def usergoal_params
-            params.permit(:user_id, :goal_id)
+            params.require(:user_goal).permit(:user_id, :goal_id)
         end
 end
