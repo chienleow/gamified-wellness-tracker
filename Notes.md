@@ -24,6 +24,10 @@ Confirm:
 - [ ] Views use partials if appropriate
 
 
+Personal TO-DO:
+Go with the conventional way, use goal index to show goals only
+Have users "click button" on goal show page
+Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage
 
 
 <option value="<%= @user.team_id %>">Team A</option>
