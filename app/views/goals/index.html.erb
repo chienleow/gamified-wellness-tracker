@@ -2,11 +2,11 @@
 
 <div>
     <%= form_for @usergoal do |f| %>
-        <%= @goals.each do |goal| %>
-            <p><%= @goal.category %></p>
-            <p><%= @goal.description %></p>
-            <%= f.hidden_field :goal_id %><br />
-            <%= f.hidden_field :user_id %><br />
+        <% @goals.each do |goal| %>
+            <strong><p><%= goal.category %></p></strong>
+            <p><%= goal.description %></p>
+            <%= f.hidden_field :goal_id %>
+            <%= f.hidden_field :user_id %>
             <%= f.submit "Add this to my User Goal" %>
         <% end %>
     <% end %>
