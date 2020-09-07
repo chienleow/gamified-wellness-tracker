@@ -42,6 +42,16 @@ Confirm:
     <% end %>
 <% end %>
 
+<% @goals.each do |goal| %>
+    <%= form_for @usergoal do |f| %>
+        <strong><p><%= goal.category %></p></strong>
+        <p><%= goal.description %></p>
+        <%= f.hidden_field :goal_id %>
+        <%= f.hidden_field :user_id %>
+        <%= f.submit "Add this to my User Goal" %>
+    <% end %>
+<% end %>
+
 
 
 

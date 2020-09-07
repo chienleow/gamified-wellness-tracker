@@ -4,8 +4,6 @@ class UserGoalsController < ApplicationController
     def create
         @usergoal = UserGoal.new(usergoal_params)
         @usergoal.save
-        # set user.id to usergoal.user_id
-        # set goal.id to usergoal.goal_id
         redirect_to usergoal_path(@usergoal)
     end
 
@@ -16,6 +14,6 @@ class UserGoalsController < ApplicationController
     private
 
         def usergoal_params
-            params.require(:usergoal).permit(:user_id, :goal_id, :complete, :notes)
+            params.require(:usergoal).permit(:user_id, :goal_id)
         end
 end

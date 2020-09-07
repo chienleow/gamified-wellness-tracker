@@ -3,11 +3,11 @@
 <div>
     <%= form_for @usergoal do |f| %>
         <% @goals.each do |goal| %>
-            <strong><p><%= goal.category %></p></strong>
-            <p><%= goal.description %></p>
+            <strong><p><%= f.label goal.category %></p></strong>
+            <p><%= f.label goal.description %></p>
             <%= f.hidden_field :goal_id %>
             <%= f.hidden_field :user_id %>
-            <%= f.submit "Add this to my User Goal" %>
         <% end %>
+        <%= f.submit "Add this to my User Goal" %>
     <% end %>
 </div>
