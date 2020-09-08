@@ -1,9 +1,9 @@
 <h2>Choose Your Daily Goals</h2>
 
-
 <% @goals.each do |goal| %>
     <%= form_for @usergoal do |f| %>
         <strong><p><%= f.label goal.category %></p></strong>
+        <strong>Suggested activities:</strong>
         <p><%= f.label goal.description %></p>
         <%= f.hidden_field :goal_id, value: goal.id %>
         <%= f.hidden_field :user_id, value: current_user.id %>
