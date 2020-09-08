@@ -24,7 +24,18 @@ Confirm:
 - [ ] Views use partials if appropriate
 
 
-Personal TO-DO:
+TO-DO list:
+- [ ] Include nested resource show or index (URL e.g. users/2/recipes) (my eg teams/1/users)
+- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (my eg teams/1/users/new) at sign up page, show a page to choose teams to join upon registration
+
+
+
+Questions:
+1. Is it the convention to use Rails index ONLY as a page to show ALL my goals? or can I have forms and people submitting from there?
+2. can the nested new form be the same as nested show and index?
+
+
+
 Go with the conventional way, use goal index to show goals only
 Have users "click button" on goal show page
 Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage

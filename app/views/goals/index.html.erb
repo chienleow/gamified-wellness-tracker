@@ -1,12 +1,12 @@
-<h2>Choose Your Daily Goals</h2>
+<h2>Choose Your Wellness Goals</h2>
 
 <% @goals.each do |goal| %>
     <%= form_for @usergoal do |f| %>
-        <strong><p><%= f.label goal.category %></p></strong>
+        <strong><h3><%= f.label goal.category %></h3></strong>
         <strong>Suggested activities:</strong>
         <p><%= f.label goal.description %></p>
         <%= f.hidden_field :goal_id, value: goal.id %>
         <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit "Add this to my User Goal" %>
+        <%= f.submit "Add to Profile" %>
     <% end %>
 <% end %>
