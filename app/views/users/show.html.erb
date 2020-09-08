@@ -5,8 +5,6 @@
 <h3>In Progress</h3>
 <% @user.user_goals.each do |usergoal| %>
     <strong><p><%= usergoal.goal.category %></p></strong>
-    <strong>Suggested activities:</strong><br>
-    <p><%= usergoal.goal.description %></p>
+    <strong>Your Goals:</strong><br>
+    <p><%= usergoal.notes %></p><br>
 <% end %>
-
-<h4>Add notes here? nested routes?</h4>
