@@ -39,6 +39,7 @@ Remember, you are building the MVP!! Get that done first, you can always modify 
 
 
 # goals > index
+# Brainstorm w/ Agi
 <% @goals.each do |goal| %>
     <%= form_for @usergoal do |f| %>
         <%= goal.description %>
@@ -46,12 +47,13 @@ Remember, you are building the MVP!! Get that done first, you can always modify 
     <% end %>
 <% end %>
 
+# Brainstorm w/ Jhonny
 <% @goals.each do |goal| %>
     <%= form_for @usergoal do |f| %>
-        <strong><p><%= goal.category %></p></strong>
-        <p><%= goal.description %></p>
-        <%= f.hidden_field :goal_id %>
-        <%= f.hidden_field :user_id %>
+        <strong><p><%= link_to goal.category, goal_path(goal) %></p></strong>
+        <p><%= f.label goal.description %></p>
+        <%= f.hidden_field :goal_id, value: goal.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
         <%= f.submit "Add this to my User Goal" %>
     <% end %>
 <% end %>

@@ -6,12 +6,11 @@ class UserGoalsController < ApplicationController
     end
 
     def create
-        user_id = current_user.id
-        goal_id = params[""]["goal_id"]
-        @usergoal = UserGoal.create(user_id: user_id, goal_id: goal_id)
         #get user_id from current_user helper
+        # user_id = current_user.id
+        # goal_id = params["usergoal"]["goal_id"]
+        @usergoal = UserGoal.create(usergoal_params)
         @usergoal.save
-        byebug
         redirect_to user_goal_path(@usergoal)
     end
 
