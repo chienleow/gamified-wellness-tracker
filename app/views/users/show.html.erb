@@ -1,1 +1,9 @@
 <h1>Welcome <%= @user.username %>!</h1>
+
+<h2>Your Dashboard</h2>
+
+<h3>In Progress</h3>
+<% @user.user_goals.each do |usergoal| %>
+    <%= usergoal.goal.category %><br>
+    <%= usergoal.goal.description %><br>
+<% end %>

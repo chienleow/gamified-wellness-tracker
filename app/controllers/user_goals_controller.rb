@@ -11,7 +11,9 @@ class UserGoalsController < ApplicationController
         # goal_id = params["usergoal"]["goal_id"]
         @usergoal = UserGoal.create(usergoal_params)
         @usergoal.save
-        redirect_to user_goal_path(@usergoal)
+        # !!!!! MAKE SURE IT IS UNIQUE, ADD VALIDATIONS
+        redirect_to user_path(@usergoal.user)
+        # redirect to the user page instead, users don't need to know about usergoal page
     end
 
     def index
