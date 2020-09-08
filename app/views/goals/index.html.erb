@@ -7,6 +7,8 @@
         <p><%= f.label goal.description %></p>
         <%= f.hidden_field :goal_id, value: goal.id %>
         <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.label :notes, 'What would you like to work on:' %>
+        <%= f.text_field :notes %>
         <%= f.submit "Add to Profile" %>
     <% end %>
 <% end %>
