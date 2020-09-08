@@ -4,6 +4,6 @@
 
 <h3>In Progress</h3>
 <% @user.user_goals.each do |usergoal| %>
-    <%= usergoal.goal.category %><br>
-    <%= usergoal.goal.description %><br>
+    <strong><p><%= usergoal.goal.category %></p></strong>
+    <p><%= usergoal.goal.description %></p><br>
 <% end %>
