@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'sessions#welcome'
+  get '/' => 'sessions#home'
   
   get '/signup' => 'users#new' # we don't need a post 'signup' because resources :users give us post 'users' => 'users#create'
   
