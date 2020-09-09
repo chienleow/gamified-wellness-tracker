@@ -2,19 +2,22 @@
 
 <%= form_for @user do |f| %>
     <%= f.label :first_name, 'First Name:' %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name %><br><br>
 
     <%= f.label :last_name, 'Last Name:' %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name %><br><br>
 
     <%= f.label :username, 'Username:' %>
-    <%= f.text_field :username %>
+    <%= f.text_field :username %><br><br>
+
+    <%= f.label :email, 'Email:' %>
+    <%= f.text_field :email %><br><br>
 
     <%= f.label :password, 'Password:' %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password %><br><br>
 
     <%= f.label :team, 'Team:' %>
-    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %>
+    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %><br><br>
 
     <%= f.submit 'Sign Up' %>
 
