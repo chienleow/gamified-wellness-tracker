@@ -12,7 +12,7 @@ Specs:
 - [x] Include signup
 - [x] Include login
 - [x] Include logout
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
 - [ ] Include nested resource show or index (URL e.g. users/2/recipes)
 - [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
@@ -29,21 +29,9 @@ TO-DO list:
 - [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (my eg teams/1/users/new) at sign up page, show a page to choose teams to join upon registration
 
 
-
 Questions:
-1. Google omniauth
-2. Clarification questions about nested resources
-3. Convention on views
-
-1. Is it the convention to use Rails index ONLY as a page to show ALL my goals? or can I have forms and people submitting from there(like what I have now)?
-2. Do I need a page for usergoal show, or am I fine just put that in user show(like what I have now)?
-3. can the nested new form be the same as nested show and index?
-4. Omniauth
 
 
-
-Go with the conventional way, use goal index to show goals only
-Have users "click button" on goal show page
 Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage
 
 
@@ -63,18 +51,6 @@ Remember, you are building the MVP!! Get that done first, you can always modify 
         <%= f.submit " " %>
     <% end %>
 <% end %>
-
-# Brainstorm w/ Jhonny
-<% @goals.each do |goal| %>
-    <%= form_for @usergoal do |f| %>
-        <strong><p><%= link_to goal.category, goal_path(goal) %></p></strong>
-        <p><%= f.label goal.description %></p>
-        <%= f.hidden_field :goal_id, value: goal.id %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit "Add this to my User Goal" %>
-    <% end %>
-<% end %>
-
 
 
 
