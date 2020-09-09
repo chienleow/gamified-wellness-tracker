@@ -26,6 +26,10 @@ class SessionsController < ApplicationController
             user.username = auth[:info][:first_name]
             user.password = SecureRandom.hex(10)
         end
+        # render a page for google users to choose a team
+        # make sure i carry the same @user
+        # set a fake team first (so i don't have to carry @user)
+        # update method for changing fake team to user desired team
         byebug
         if @user.save
             session[:user_id] = @user.id

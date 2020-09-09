@@ -31,9 +31,14 @@ TO-DO list:
 
 
 Questions:
+1. Google omniauth
+2. Clarification questions about nested resources
+3. Convention on views
+
 1. Is it the convention to use Rails index ONLY as a page to show ALL my goals? or can I have forms and people submitting from there(like what I have now)?
 2. Do I need a page for usergoal show, or am I fine just put that in user show(like what I have now)?
 3. can the nested new form be the same as nested show and index?
+4. Omniauth
 
 
 
