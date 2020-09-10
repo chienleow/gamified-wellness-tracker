@@ -16,6 +16,14 @@ class SessionsController < ApplicationController
         end
     end
 
+    def show
+
+    end
+
+    def index
+        
+    end
+
     def destroy
         reset_session
         redirect_to '/'
@@ -30,7 +38,7 @@ class SessionsController < ApplicationController
         # set a fake team first (so I don't have to carry @user)
         # render a page for google users to choose a team
         # update method for changing fake team to user desired team
-        byebug
+        # byebug
         if @user.save
             session[:user_id] = @user.id
             # render :team_select_page

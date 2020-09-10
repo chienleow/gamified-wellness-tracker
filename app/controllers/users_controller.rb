@@ -19,6 +19,14 @@ class UsersController < ApplicationController
         redirect_to '/' if !@user
     end
 
+    def index
+        if params[:team_id]
+          @users = User.find(params[:team_id]).users
+        else
+          @users = User.all
+        end
+    end
+
     private
 
         def user_params
