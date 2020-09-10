@@ -1,5 +1,8 @@
 <h1>Welcome to Gamified Wellness Tracker!</h1>
 
-<%= link_to "Sign Up", signup_path %>
-<%= link_to "Log in", login_path %>
-<%= link_to "Log in with Google", '/auth/google_oauth2' %>
+
+<div class="container">
+    <button type="button" class="btn btn-default"><%= link_to "Sign Up", signup_path %></button>
+    <button type="button" class="btn btn-default"><%= link_to "Log in", login_path %></button>
+    <button type="button" class="btn btn-default"><%= link_to "Log in with Google", '/auth/google_oauth2' %></button>
+</div>
