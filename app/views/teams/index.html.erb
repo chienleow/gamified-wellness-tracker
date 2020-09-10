@@ -3,10 +3,9 @@
 <h2>All Teams</h2>
 
 <% @teams.each do |team| %>
-    <%= link_to team.team_name, team_path(team) %>
-    <%= team.team_points %><br>
-    <% team.users.each do |user| %>
-        <%= user.username %>
-        <%= user.personal_points %>
-    <% end %><br><br>
+    <%= link_to team.team_name, team_path(team) %><br>
+    <p>Team Points: <%= team.team_points %></p>
+    <p>Team Member(s): <% team.users.each do |user| %>
+        <%= user.username %></p>
+    <% end %><br>
 <% end %>
