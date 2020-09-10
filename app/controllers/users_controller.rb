@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
     def new
-        if params[:team_id] && @team = Team.find(params[:team_id])
+        if params[:team_id] && @team = Team.find_by_id(params[:team_id])
             @user = @team.users.build
         else
-            @error = "That user doesn't exit" if params[:user_id]
+            @error = "That team doesn't exit" if params[:team_id]
             @user = User.new
         end
     end
@@ -25,10 +25,10 @@ class UsersController < ApplicationController
     end
 
     def index
-        if params[:team_id]
-            @users = Team.find(params[:team_id]).users
+        if params[:team_id] && @team = Team.find_by_id(params[:team_id])
+            @users = @team.users
         else
-            @error = "That user doesn't exit" if params[:user_id]
+            flash[:message] = "That team doesn't exit" if params[:team_id]
             @users = User.all
         end
     end
