@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
+    before_action :redirect_if_not_logged_in, only: [:show, :index]
+
     def new
         if params[:team_id] && @team = Team.find_by_id(params[:team_id])
             @user = @team.users.build
         else
-            @error = "That team doesn't exit" if params[:team_id]
+            flash[:message] = "That team doesn't exit." if params[:team_id]
             @user = User.new
         end
     end
@@ -14,6 +16,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
+            flash[:message] = "Please fill in all columns."
             render :new
         end
     end
@@ -28,7 +31,7 @@ class UsersController < ApplicationController
         if params[:team_id] && @team = Team.find_by_id(params[:team_id])
             @users = @team.users
         else
-            flash[:message] = "That team doesn't exit" if params[:team_id]
+            flash[:message] = "That team doesn't exit." if params[:team_id]
             @users = User.all
         end
     end
