@@ -27,7 +27,7 @@ Confirm:
 TO-DO list:
 - [ ] Reassign team when Google user is saved
 - [ ] How to make sure no repetition in teams, maybe not needed because you normally won't seed things twice?
-
+- [ ] Check all error messages if they are working
 
 Questions to study group tomorrow:
 1. what to expect in reviews?
