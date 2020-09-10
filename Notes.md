@@ -25,8 +25,7 @@ Confirm:
 
 
 TO-DO list:
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes) (my eg teams/1/users)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (my eg teams/1/users/new) at sign up page, show a page to choose teams to join upon registration
+- [ ] Reassign team when Google user is saved
 
 
 Questions to study group tomorrow:
