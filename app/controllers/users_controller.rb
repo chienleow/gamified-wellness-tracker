@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
     def new
-        @user = User.new
+        if params[:team_id] && @team = Team.find(params[:team_id])
+            @user = @team.users.build
+        else
+            @error = "That user doesn't exit" if params[:user_id]
+            @user = User.new
+        end
     end
 
     def create
@@ -21,9 +26,10 @@ class UsersController < ApplicationController
 
     def index
         if params[:team_id]
-          @users = Team.find(params[:team_id]).users
+            @users = Team.find(params[:team_id]).users
         else
-          @users = User.all
+            @error = "That user doesn't exit" if params[:user_id]
+            @users = User.all
         end
     end
 
