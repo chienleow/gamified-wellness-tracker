@@ -1,7 +1,7 @@
 <h2>All Teams</h2>
 
 <% @teams.each do |team| %>
-    <%= team.team_name %>
+    <%= link_to team.team_name, team_path(team) %>
     <%= team.team_points %><br>
     <% team.users.each do |user| %>
         <%= user.username %>

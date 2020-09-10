@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     def index
         if params[:team_id]
-          @users = User.find(params[:team_id]).users
+          @users = Team.find(params[:team_id]).users
         else
           @users = User.all
         end

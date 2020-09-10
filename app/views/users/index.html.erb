@@ -1,10 +1,7 @@
 <h2>All Users</h2>
 
 <% @users.each do |user| %>
-    <%= user.team_name %>
-    <%= team.team_points %><br>
-    <% team.users.each do |user| %>
-        <%= user.username %>
-        <%= user.personal_points %>
-    <% end %><br><br>
+    <ol>
+        <li><%= user.username %></li>
+    </ol>
 <% end %>

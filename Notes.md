@@ -13,7 +13,7 @@ Specs:
 - [x] Include login
 - [x] Include logout
 - [x] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
+- [x] Include nested resource show or index (URL e.g. users/2/recipes) (my eg teams/1/users)
 - [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
@@ -29,7 +29,8 @@ TO-DO list:
 - [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) (my eg teams/1/users/new) at sign up page, show a page to choose teams to join upon registration
 
 
-Questions:
+Questions to study group tomorrow:
+1. what to expect in reviews?
 
 
 Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage
