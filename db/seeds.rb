@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Seeds for Team
-team_a = Team.create(team_name: "Team A")
-team_b = Team.create(team_name: "Team B")
-team_c = Team.create(team_name: "Team C")
+# team_a = Team.create(team_name: "Team A")
+# team_b = Team.create(team_name: "Team B")
+# team_c = Team.create(team_name: "Team C")
 
 # Seeds for Goal
 physical = Goal.create(category: "Physical Goals", description: "6 hours of Sleep, Exercise, Pack your Lunch")
