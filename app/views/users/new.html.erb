@@ -18,10 +18,12 @@
     <%= f.label :password, 'Password:' %>
     <%= f.password_field :password %><br><br>
 
-<!-- put a condition to not show below when params has team_id -->
-
-    <%= f.label :team, 'Team:' %>
-    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %><br><br>
+    <% if params[:team_id] && @team = Team.find_by_id(params[:team_id]) %>
+        <%= @team.team_name %>
+    <% else %>
+        <%= f.label :team, 'Team:' %>
+        <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %>
+    <% end %><br><br>
 
     <%= f.submit 'Sign Up' %>
 

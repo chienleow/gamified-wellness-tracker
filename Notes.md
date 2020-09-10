@@ -32,7 +32,7 @@ TO-DO list:
 Questions:
 1. what to expect in review?
 2. teams/1/users/new, team doesn't preselected
-3. how to add in multiple values of the same attribute in one submit?
+3. how to add in multiple values of the same attribute in one submit? (Don't, if you want, make notes another table, but that's for stretch goals)
 
 
 Reviews:
