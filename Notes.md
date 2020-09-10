@@ -26,6 +26,7 @@ Confirm:
 
 TO-DO list:
 - [ ] Reassign team when Google user is saved
+- [ ] How to make sure no repetition in teams, maybe not needed because you normally won't seed things twice?
 
 
 Questions to study group tomorrow:
