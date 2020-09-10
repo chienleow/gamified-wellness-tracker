@@ -29,11 +29,17 @@ TO-DO list:
 - [ ] How to make sure no repetition in teams, maybe not needed because you normally won't seed things twice?
 - [ ] Check all error messages if they are working
 
-Questions to study group tomorrow:
-1. what to expect in reviews?
+Questions:
+1. what to expect in review?
+2. teams/1/users/new, team doesn't preselected
+3. how to add in multiple values of the same attribute in one submit?
 
 
-Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage
+Reviews:
+Similar to Sinatra, walkthrough authentication, how you meet those requirements, live coding is a step up, query methods, using where joins, order, generate SQL, active record model class method, look more into query methods
+
+
+!!! Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage
 
 
 <option value="<%= @user.team_id %>">Team A</option>
