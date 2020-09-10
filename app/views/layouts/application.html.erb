@@ -27,6 +27,9 @@
           <%= link_to "View Teams", teams_path, class:"navbar-brand" %>
       <% end %>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <%= link_to "Log Out", logout_path, class:"navbar-brand", method:'delete' %>
+    </ul>
   </div>
 </nav>
   
