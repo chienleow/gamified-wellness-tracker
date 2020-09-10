@@ -1,5 +1,8 @@
 <h1><%= @team.team_name %></h1>
 <h2>Dream Team Members</h2>
 <% @team.users.each do |user| %>
-    <%= user.username %>
+    <%= user.username %><br><br>
 <% end %>
+
+<%= link_to "View all members' personal points", team_users_path(@team) %><br><br>
+<%= link_to "Create new user for this team", new_team_user_path(@team) %>
