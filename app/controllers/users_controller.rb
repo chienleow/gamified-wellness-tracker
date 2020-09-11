@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     def update
         @user = User.find_by_id(params[:id])
         redirect_to users_path if @user != current_user
-        if @user.update(post_params)
+        if @user.update(user_params)
           redirect_to user_path(@user)
         else
           render :edit
@@ -54,6 +54,6 @@ class UsersController < ApplicationController
     private
 
         def user_params
-            params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :team_id)
+            params.require(:user).permit(:username, :email, :password, :team_id)
         end
 end
