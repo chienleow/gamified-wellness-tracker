@@ -17,7 +17,7 @@ class UserGoalsController < ApplicationController
     end
 
     def last_updated
-        user_goals.ordered_by_updated_at
+        @sort_last_updated = UserGoal.all.ordered_by_updated_at
     end
     
     private
