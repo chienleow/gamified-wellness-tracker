@@ -3,8 +3,9 @@ class User < ApplicationRecord
   has_many :goals, through: :user_goals
   belongs_to :team
 
-  validates :first_name, :last_name, :username, :presence => true
+  validates :username, presence: true
   validates :email, uniqueness: true, presence: true
+# make sure the validations here matches google user validations
 
   has_secure_password
 end
