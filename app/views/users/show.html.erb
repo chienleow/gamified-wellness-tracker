@@ -5,4 +5,5 @@
 <h3>Goal(s) In Progress</h3>
 <% @user.user_goals.each do |usergoal| %>
     <p><%= usergoal.notes %></p>
+    <p><%= usergoal.updated_at.strftime("Last updated %A, %b %e, at %l:%M %p") %></p>
 <% end %>
