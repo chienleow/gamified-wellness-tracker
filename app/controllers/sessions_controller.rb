@@ -43,8 +43,8 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             # render :team_select_page
             # update method for changing fake team to user desired team
-            
-            redirect_to user_path(@user)
+            redirect_to edit_user_path(@user)
+            # redirect_to user_path(@user)
         else
             redirect_to '/'
         end
