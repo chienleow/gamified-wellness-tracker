@@ -1,6 +1,0 @@
-<h3>Goal(s) In Progress</h3>
-<h4>(Sort By Last Updated)</h4>
-<% @sort_last_updated.each do |usergoal| %>
-    <li><%= usergoal.notes %></li>
-    <p><%= usergoal.updated_at.strftime("%A, %b %e, at %l:%M %p") %></p>
-<% end %>

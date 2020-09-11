@@ -1,0 +1,7 @@
+<h1>Goals by All Team Members</h1>
+<h3>Sort By Last Updated</h3>
+
+<% @sort_last_updated.each do |usergoal| %>
+    <li><%= usergoal.notes %> by <%= usergoal.user.username %></li>
+    (<%= usergoal.updated_at.strftime("%A, %b %e, at %l:%M %p") %>)<br><br>
+<% end %>

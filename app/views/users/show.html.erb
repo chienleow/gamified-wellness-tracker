@@ -2,7 +2,7 @@
 
 <h2>Your Dashboard</h2>
 
-<h3>Goal(s) In Progress  <button type="button" class="btn btn-default"><%= link_to "Sort by Last Updated", last_updated_goals_path %></button></h3>
+<h3>Goal(s) In Progress</h3>
 
 <% @usergoals.each do |usergoal| %>
     <li><%= usergoal.notes %></li>

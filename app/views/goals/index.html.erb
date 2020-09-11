@@ -1,5 +1,7 @@
 <h2>Choose Your Wellness Goals</h2>
 
+<button type="button" class="btn btn-default"><%= link_to "View Last Updated Goals by Team Members", last_updated_goals_path %></button>
+
 <% @goals.each do |goal| %>
     <%= form_for @usergoal do |f| %>
         <strong><h3><%= f.label goal.category %></h3></strong>
