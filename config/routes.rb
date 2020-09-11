@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'auth/google_oauth2/callback' => 'sessions#google'
 
-  get '/last_updated_goals' => 'user_goals#last_updated'
+  get '/last_updated_goals' => 'users#last_updated'
 
   resources :user_goals
   resources :goals

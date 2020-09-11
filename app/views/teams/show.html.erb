@@ -1,10 +1,15 @@
 <%= flash[:message] if flash[:message] %>
 
 <h1><%= @team.team_name %></h1>
-<h2>Dream Team Members</h2>
-<% @team.users.each do |user| %>
-    <%= user.username %><br><br>
-<% end %>
 
-<%= link_to "View all members' personal points", team_users_path(@team) %><br><br>
-<%= link_to "Create new user for this team", new_team_user_path(@team) %>
+<div class="container">
+    <button type="button" class="btn btn-default"><%= link_to "Details about team members", team_users_path(@team) %></button>
+    <button type="button" class="btn btn-default"><%= link_to "Create new user for this team", new_team_user_path(@team) %></button>
+</div>
+
+<h2>Team Members</h2>
+<% @team.users.each do |user| %>
+    <ol>
+        <li><%= user.username %></li>
+    </ol>
+<% end %>
