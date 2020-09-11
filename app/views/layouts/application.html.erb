@@ -20,8 +20,8 @@
     <ul class="nav navbar-nav">
       <% if current_user %>
         <%= link_to "#{current_user.username}'s Profile", user_path(current_user), class:"navbar-brand" %>
-        <%= link_to "View Goals", goals_path, class:"navbar-brand" %>
-        <%= link_to "View Teams", teams_path, class:"navbar-brand" %>
+        <%= link_to "Goals", goals_path, class:"navbar-brand" %>
+        <%= link_to "Teams", teams_path, class:"navbar-brand" %>
       <% else %>
         <a class="navbar-brand" href="<%= '/' %>">Home</a>
       <% end %>

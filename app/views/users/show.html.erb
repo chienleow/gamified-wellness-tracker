@@ -2,9 +2,7 @@
 
 <h2>Your Dashboard</h2>
 
-<h3>In Progress</h3>
+<h3>Goal(s) In Progress</h3>
 <% @user.user_goals.each do |usergoal| %>
-    <strong><p><%= usergoal.goal.category %></p></strong>
-    <strong>Your Goals:</strong><br>
-    <p><%= usergoal.notes %></p><br>
+    <p><%= usergoal.notes %></p>
 <% end %>
