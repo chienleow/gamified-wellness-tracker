@@ -16,13 +16,9 @@ class UserGoalsController < ApplicationController
         # redirect to the user page instead, users don't need to know about usergoal page (is this right?)
     end
 
-    # def show
-    #     @usergoal = UserGoal.find_by_id(params[:id])
-    # end
-    
-    # def index
-    #     @usergoals = UserGoal.all
-    # end
+    def last_updated
+        user_goals.ordered_by_updated_at
+    end
     
     private
 

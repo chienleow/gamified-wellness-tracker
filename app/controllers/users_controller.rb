@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     def show
         redirect_if_not_logged_in
         @user = User.find_by_id(params[:id])
-        @usergoals = @user.user_goals.ordered_by_updated_at # scope method
+        @usergoals = @user.user_goals # to prevent chaining too long
         redirect_to '/' if !@user
     end
 
