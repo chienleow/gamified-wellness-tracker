@@ -25,17 +25,12 @@ Confirm:
 
 
 TO-DO list:
-- [ ] Reassign team when Google user is saved
-- [x] How to make sure no repetition in teams, maybe not needed because you normally won't seed things twice?
+- [ ] Watch MyBlog last video about validation and errors
 - [ ] Check all error messages if they are working
-
-Questions:
-1. what to expect in review?
-2. teams/1/users/new, team doesn't preselected
-3. how to add in multiple values of the same attribute in one submit? (Don't, if you want, make notes another table, but that's for stretch goals)
+- [ ] Check if you can log in via Google without choosing team over and over again.
 
 
-Reviews:
+What to expect in Reviews:
 Similar to Sinatra, walkthrough authentication, how you meet those requirements, live coding is a step up, query methods, using where joins, order, generate SQL, active record model class method, look more into query methods
 
 
