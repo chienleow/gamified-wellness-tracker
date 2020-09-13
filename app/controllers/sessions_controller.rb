@@ -30,12 +30,11 @@ class SessionsController < ApplicationController
     end
 
     def google_login
-        oauth_email = auth["info"]["email"]
-        if @user = User.find_by(email: oauth_email) # if google user exists, team reassigning method not needed
+        if @user = User.find_by(email: auth["info"]["email"]) # if google user exists, team reassigning method not needed
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
-            @user = User.create(email: oauth_email) do |user|
+            @user = User.create(email: auth["info"]["email"]) do |user|
                 user.username = auth[:info][:first_name]
                 user.email = auth[:info][:email]
                 user.password = SecureRandom.hex(10)

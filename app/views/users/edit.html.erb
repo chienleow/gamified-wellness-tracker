@@ -3,8 +3,8 @@
 <%= form_for @user do |f| %>
     <%= f.label :username, 'Username:' %>
     <%= f.text_field :username %><br><br>
-    <%= f.label :team, 'Team:' %>
-    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %>
+    <%= f.label :team, 'Select a Team:' %>
+    <%= f.select :team_id, options_from_collection_for_select(Team.all, :id, :team_name) %><br><br>
     
     <%= f.submit 'Sign Up/Log in' %>
 <% end %>
