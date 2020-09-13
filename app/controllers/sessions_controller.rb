@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
 
     def google
         oauth_email = auth["info"]["email"]
-        if @user = User.find_by(email: oauth_email)
+        if @user = User.find_by(email: oauth_email) # if google user exists, team reassigning method not needed
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
@@ -46,10 +46,7 @@ class SessionsController < ApplicationController
             # update method for changing fake team to user desired team
             if @user.save
                 session[:user_id] = @user.id
-                # render :team_select_page
-                # update method for changing fake team to user desired team
                 redirect_to edit_user_path(@user)
-                # redirect_to user_path(@user)
             else
                 flash[:message] = "Login Error, please try again."
                 redirect_to '/'
