@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   delete '/logout' => 'sessions#destroy'
 
-  get 'auth/google_oauth2/callback' => 'sessions#google'
+  get 'auth/google_oauth2/callback' => 'sessions#google_login'
 
   get '/last_updated_goals' => 'user_goals#last_updated'
 

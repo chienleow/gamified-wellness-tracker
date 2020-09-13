@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
         redirect_to '/'
     end
 
-    def google
+    def google_login
         oauth_email = auth["info"]["email"]
         if @user = User.find_by(email: oauth_email) # if google user exists, team reassigning method not needed
             session[:user_id] = @user.id
