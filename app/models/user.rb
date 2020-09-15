@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true
   validates :email, uniqueness: true, presence: true
-# make sure the validations here matches google user validations
+  # make sure the validations here matches google user validations
 
   has_secure_password
 end

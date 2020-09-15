@@ -27,7 +27,7 @@ Confirm:
 TO-DO list:
 - [ ] Watch MyBlog last video about validation and errors
 - [ ] Check all error messages if they are working
-- [ ] Check if you can log in via Google without choosing team over and over again.
+- [x] Check if you can log in via Google without choosing team over and over again.
 
 
 What to expect in Reviews:

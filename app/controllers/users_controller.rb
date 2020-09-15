@@ -16,7 +16,6 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
-            flash[:message] = "Please fill in all columns."
             render :new
         end
     end
