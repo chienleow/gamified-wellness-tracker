@@ -39,7 +39,7 @@ class SessionsController < ApplicationController
                 session[:user_id] = @user.id
                 redirect_to edit_user_path(@user)
             else
-                # flash[:message] = "Login Error, please try again."
+                flash[:message] = "Login Error, please try again."
                 redirect_to '/'
             end
         end
