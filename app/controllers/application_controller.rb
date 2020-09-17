@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
     # give access to methods in the views
 
     private
-
     def current_user
         User.find_by(id: session[:user_id]) if session[:user_id]
     end

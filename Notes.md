@@ -26,8 +26,8 @@ Confirm:
 
 TO-DO list:
 - [ ] Watch MyBlog last video about validation and errors
-- [ ] Check all error messages if they are working
-- [ ] Login error message not showing!!!
+- [x] Check all error messages if they are working
+- [x] Login error message not showing!!!
 - [x] Decided not to go too far for styling (for now), stick to MVP
 - [x] Check if you can log in via Google without choosing team over and over again.
 

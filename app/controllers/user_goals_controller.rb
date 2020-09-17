@@ -11,9 +11,8 @@ class UserGoalsController < ApplicationController
         # goal_id = params["usergoal"]["goal_id"]
         @usergoal = UserGoal.create(usergoal_params)
         @usergoal.save
-        # !!!!! MAKE SURE IT IS UNIQUE, ADD VALIDATIONS, to avoid repetition
         redirect_to user_path(@usergoal.user)
-        # redirect to the user page instead, users don't need to know about usergoal page (is this right?)
+        # redirect to the user page instead, users don't need to know about usergoal page
     end
 
     def last_updated
@@ -21,7 +20,6 @@ class UserGoalsController < ApplicationController
     end
     
     private
-
         def usergoal_params
             params.require(:user_goal).permit(:user_id, :goal_id, :notes)
         end
