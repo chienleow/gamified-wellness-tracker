@@ -34,30 +34,3 @@ TO-DO list:
 
 What to expect in Reviews:
 Similar to Sinatra, walkthrough authentication, how you meet those requirements, live coding is a step up, query methods, using where joins, order, generate SQL, active record model class method, look more into query methods
-
-
-!!! Remember, you are building the MVP!! Get that done first, you can always modify your app to fit the stretch goals later for real usage
-
-
-<option value="<%= @user.team_id %>">Team A</option>
-
-<option value="1">Team A</option>
-<% teams.each do |team| %>
-   <option value=<%= team.id %>><%= team.name %></option>
-<% end %>
-
-
-# goals > index
-# Brainstorm w/ Agi
-<% @goals.each do |goal| %>
-    <%= form_for @usergoal do |f| %>
-        <%= goal.description %>
-        <%= f.submit " " %>
-    <% end %>
-<% end %>
-
-
-
-# stretch goals:
-# 1. users/admin can change team name
-# 2. 
