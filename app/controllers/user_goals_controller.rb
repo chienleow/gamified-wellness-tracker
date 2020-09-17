@@ -6,13 +6,9 @@ class UserGoalsController < ApplicationController
     end
 
     def create
-        #get user_id from current_user helper
-        # user_id = current_user.id # maybe use this?
-        # goal_id = params["usergoal"]["goal_id"]
-        @usergoal = UserGoal.create(usergoal_params)
+        @usergoal = current_user.user_goals.build(usergoal_params)
         @usergoal.save
-        redirect_to user_path(@usergoal.user)
-        # redirect to the user page instead, users don't need to know about usergoal page
+        redirect_to user_path(@usergoal.user) # redirect to the user page instead, users don't need to know about usergoal page
     end
 
     def last_updated
