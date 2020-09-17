@@ -7,7 +7,7 @@ class UserGoalsController < ApplicationController
 
     def create
         #get user_id from current_user helper
-        # user_id = current_user.id
+        # user_id = current_user.id # maybe use this?
         # goal_id = params["usergoal"]["goal_id"]
         @usergoal = UserGoal.create(usergoal_params)
         @usergoal.save
