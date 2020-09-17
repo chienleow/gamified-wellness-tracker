@@ -22,6 +22,8 @@ class SessionsController < ApplicationController
     end
 
     def google_login
+        # find_or_initialize_by, doesn't save immediately
+        # check_record?
         if @user = User.find_by(email: auth["info"]["email"]) # if google user exists, team reassigning method not needed
             session[:user_id] = @user.id
             redirect_to user_path(@user)
@@ -32,7 +34,7 @@ class SessionsController < ApplicationController
                 user.password = SecureRandom.hex(10)
                 user.team = Team.all.first #sets a random team for the user first (so I won't lose @user), have user change later
             end
-            if @user.save
+            if @user.save # user.valid?
                 session[:user_id] = @user.id
                 redirect_to edit_user_path(@user)
             else
