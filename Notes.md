@@ -34,3 +34,12 @@ TO-DO list:
 
 What to expect in Reviews:
 Similar to Sinatra, walkthrough authentication, how you meet those requirements, live coding is a step up, query methods, using where joins, order, generate SQL, active record model class method, look more into query methods
+
+
+
+Build a search bar:
+1. building a form for users to type in their search and hit submit
+2. after submitting
+3. scope method will find the user name 
+4. redirect to a brand new page highlighting the user name and their team
+

@@ -8,4 +8,6 @@ class User < ApplicationRecord
   # make sure the validations here matches google user validations
 
   has_secure_password
+
+  scope :find_user, -> { User.where(username: 'username').take }
 end
