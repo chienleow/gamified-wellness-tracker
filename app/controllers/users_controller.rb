@@ -28,10 +28,10 @@ class UsersController < ApplicationController
     end
 
     def index
-        if params[:team_id] && @team = Team.find_by_id(params[:team_id])
+        if params[:team_id] && @team = Team.find_by_id(params[:team_id]) # check if it is nested then find the @team
             @users = @team.users
         else
-            flash[:message] = "That team doesn't exit." if params[:team_id]
+            flash[:message] = "That team doesn't exist." if params[:team_id]
             @users = User.all
         end
     end
