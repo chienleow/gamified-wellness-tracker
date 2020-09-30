@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
                 user.password = SecureRandom.hex(10)
                 user.team = Team.all.first #sets a random team for the user first (so I won't lose @user), have user change later
             end
-            if @user.save # user.valid?
+            if @user.valid? # user.valid? because .create already saves it
                 session[:user_id] = @user.id
                 redirect_to edit_user_path(@user)
             else
