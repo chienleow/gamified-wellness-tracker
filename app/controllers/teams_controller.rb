@@ -15,10 +15,11 @@ class TeamsController < ApplicationController
 
     def index
         @teams = Team.all
+        @user = Team.search(params[:search])
     end
 
     private
         def team_params
-            params.require(:team).permit(:team_name)
+            params.require(:team).permit(:team_name, :search)
         end
 end

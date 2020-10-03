@@ -9,5 +9,5 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  scope :find_user, -> { User.where(username: 'username').take }
+  scope :filter_by_username, -> (username) { where username: username }
 end

@@ -2,11 +2,11 @@
 
 <h2>All Teams</h2>
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:username, "Search for:") %>
-  <%= text_field_tag(:username) %>
+<%= form_tag("/teams", method: "get") do %>
+  <%= label_tag(:search, "Team Member:") %>
+  <%= text_field_tag(:search, params[:search]) %>
   <%= submit_tag("Search") %>
-<% end %>
+<% end %><br>
 
 <% @teams.each do |team| %>
     <button type="button" class="btn btn-default"><%= link_to team.team_name, team_path(team) %></button><br><br>
