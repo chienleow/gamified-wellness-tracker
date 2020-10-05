@@ -20,11 +20,6 @@ class TeamsController < ApplicationController
     def search
         @search_username = params[:search_username]
         @found_username = User.all.filter_by_username(@search_username)
-        redirect_to teams_search_path
-    end
-
-    def search_result
-
     end
 
     private
