@@ -2,7 +2,7 @@
 
 <h2>All Teams</h2>
 
-<%= form_tag("/teams/search", method: "post") do %>
+<%= form_tag("/search", method: "post") do %>
   <%= label_tag(:search, "Team Member:") %>
   <%= text_field_tag(:search_username, params[:search_username]) %>
   <%= submit_tag("Search") %>
