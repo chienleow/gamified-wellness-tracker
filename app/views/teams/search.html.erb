@@ -1,5 +1,5 @@
 <h2><%= @found_username.first.username %></h2><br>
-<h3>Team: </h3><%= @found_username.first.team.team_name %><br>
+<h3><%= @found_username.first.team.team_name %></h3><br>
 <h3>Team Members: </h3>
 <ol><% @found_username.first.team.users.each do |user| %>
     <li><%= user.username %></li>
