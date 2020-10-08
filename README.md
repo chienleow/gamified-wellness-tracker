@@ -3,8 +3,8 @@ How do you stay motivated remotely with your peers? How do you keep you and your
 
 ## Built With
 - Frontend: [Bootstrap](https://getbootstrap.com/)
-- Backend: [Ruby on Rails] (https://rubyonrails.org/)
-- Database: [PostgreSQL] (https://www.postgresql.org/)
+- Backend: [Ruby on Rails](https://rubyonrails.org/)
+- Database: [PostgreSQL](https://www.postgresql.org/)
 
 ## Installation
 1. Fork and clone this repository down to your local environment
