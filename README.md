@@ -1,6 +1,11 @@
 # Gamified Wellness Tracker
 How do you stay motivated remotely with your peers? How do you keep you and your team members accountable? With "Gamified Wellness Tracker", you can set your daily goals along with your team members, achieve goals together while earning team points for a friendly competition.
 
+## Built With
+- Frontend: [Bootstrap](https://getbootstrap.com/)
+- Backend: [Ruby on Rails] (https://rubyonrails.org/)
+- Database: [PostgreSQL] (https://www.postgresql.org/)
+
 ## Installation
 1. Fork and clone this repository down to your local environment
 2. `cd` into the `gamified-wellness-tracker` directory
