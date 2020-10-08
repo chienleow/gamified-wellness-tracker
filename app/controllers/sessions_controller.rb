@@ -21,20 +21,31 @@ class SessionsController < ApplicationController
         redirect_to '/'
     end
 
+    # def google_login
+    #     if @user = User.find_by(email: auth["info"]["email"]) # if google user exists, team reassigning method not needed
+    #         session[:user_id] = @user.id
+    #         redirect_to user_path(@user)
+    #     else
+    #         @user = User.create(email: auth["info"]["email"]) do |user|
+    #             user.username = auth[:info][:first_name]
+    #             user.email = auth[:info][:email]
+    #             user.password = SecureRandom.hex(10)
+    #             user.team = Team.all.first #sets a random team for the user first (so I won't lose @user), have user change later
+    #         end
+    #         session[:user_id] = @user.id
+    #         redirect_to edit_user_path(@user)
+    #     end
+    # end
+
     def google_login
-        if @user = User.find_by(email: auth["info"]["email"]) # if google user exists, team reassigning method not needed
-            session[:user_id] = @user.id
-            redirect_to user_path(@user)
-        else
-            @user = User.create(email: auth["info"]["email"]) do |user|
-                user.username = auth[:info][:first_name]
-                user.email = auth[:info][:email]
-                user.password = SecureRandom.hex(10)
-                user.team = Team.all.first #sets a random team for the user first (so I won't lose @user), have user change later
-            end
-            session[:user_id] = @user.id
-            redirect_to edit_user_path(@user)
+        @user = User.find_or_create_by(email: auth["info"]["email"]) do |user|
+            user.username = auth[:info][:first_name]
+            user.email = auth[:info][:email]
+            user.password = SecureRandom.hex(10)
+            user.team ||= Team.all.first
         end
+        session[:user_id] = @user.id
+        @user.new_record? ? redirect_to edit_user_path(@user) : redirect_to user_path(@user)
     end
 
     private
