@@ -29,5 +29,8 @@ $ rake db:migrate
 - Users can customize their profile page with motivational songs, quotes, notes
 - Cap each section, so one person wouldn't take down all the points for the entire team
 
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/chienleow/gamified-wellness-tracker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
 
 
