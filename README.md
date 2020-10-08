@@ -1,5 +1,5 @@
 # Gamified Wellness Tracker
-How do you stay motivated remotely with your peers? We understand the importance of accountability. With "gamified-wellness-app", you can set your daily goals along with team members, achieve goals together while earning team points for a friendly competition.
+How do you stay motivated remotely with your peers? How do you keep you and your team members accountable? With "Gamified Wellness Tracker", you can set your daily goals along with your team members, achieve goals together while earning team points for a friendly competition.
 
 # Installation
 1. Fork and clone this repository down to your local environment
@@ -14,3 +14,9 @@ $ rake db:migrate
 ````
 5. Run `rails s` to start the server
 6. visit localhost:[port-number] (the port number will be specified after running `rails s`)
+
+# Usage (Minimum Viable Product)
+1. Welcome to Gamified Wellness Tracker App, please log in or sign up a new profile to start tracking your daily goals.
+2. Navigate to "Goals" from the top navbar to start customizing your own goals from these categories: "Physical goals", "Mental goals", "Intellectual goals" and "Daily top 5".
+3. You can view your created goals from your profile under "Your dashboard".
+4. You can view all the teams including yours by clicking "Teams".
