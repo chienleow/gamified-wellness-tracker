@@ -45,7 +45,8 @@ class SessionsController < ApplicationController
             user.team ||= Team.all.first
         end
         session[:user_id] = @user.id
-        @user.id == User.last.id ? redirect_to(edit_user_path(@user)) : redirect_to(user_path(@user))
+        @user.id == User.last.id ? redirect_to(edit_user_path(@user)) : redirect_to(user_path(@user)) 
+        # this is not accurate because if no one signed in after google user, google user will always be the last
     end
 
     private
