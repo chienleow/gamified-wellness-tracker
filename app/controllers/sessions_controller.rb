@@ -38,16 +38,32 @@ class SessionsController < ApplicationController
     # end
 
     def google_login
-        @user = User.find_or_create_by(email: auth["info"]["email"]) do |user|
+        @user = User.find_or_initialize_by(email: auth["info"]["email"]) do |user|
             user.username = auth[:info][:first_name]
             user.email = auth[:info][:email]
             user.password = SecureRandom.hex(10)
             user.team ||= Team.all.first
         end
         session[:user_id] = @user.id
-        @user.id == User.last.id ? redirect_to(edit_user_path(@user)) : redirect_to(user_path(@user)) 
-        # this is not accurate because if no one signed in after google user, google user will always be the last
+        @user.new_record? ? redirect_to(edit_user_path(@user)) : redirect_to(user_path(@user))
     end
+
+    def google_login
+        @user = User.find_or_initialize_by(email: auth["info"]["email"]) do |user|
+            user.username = auth[:info][:first_name]
+            user.email = auth[:info][:email]
+            user.password = SecureRandom.hex(10)
+            user.team ||= Team.all.first
+        end
+        session[:user_id] = @user.id
+        if @user.new_record?
+            redirect_to(edit_user_path(@user))
+        else
+            @user.save
+            redirect_to(user_path(@user))
+        end
+    end
+
 
     private
     def auth
