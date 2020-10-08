@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
         redirect_to '/'
     end
 
-    # def google_login
+    # def google_login #option 1
     #     if @user = User.find_by(email: auth["info"]["email"]) # if google user exists, team reassigning method not needed
     #         session[:user_id] = @user.id
     #         redirect_to user_path(@user)
@@ -37,31 +37,29 @@ class SessionsController < ApplicationController
     #     end
     # end
 
-    def google_login
-        @user = User.find_or_initialize_by(email: auth["info"]["email"]) do |user|
-            user.username = auth[:info][:first_name]
-            user.email = auth[:info][:email]
-            user.password = SecureRandom.hex(10)
-            user.team ||= Team.all.first
-        end
-        session[:user_id] = @user.id
-        @user.new_record? ? redirect_to(edit_user_path(@user)) : redirect_to(user_path(@user))
-    end
+    # def google_login #option 2
+    #     @user = User.find_or_initialize_by(email: auth["info"]["email"]) do |user|
+    #         user.username = auth[:info][:first_name]
+    #         user.email = auth[:info][:email]
+    #         user.password = SecureRandom.hex(10)
+    #         user.team ||= Team.all.first
+    #     end
+    #     session[:user_id] = @user.id
+    #     if @user.new_record? # check if you need to .save?
+    #         redirect_to(edit_user_path(@user))
+    #     else
+    #         redirect_to(user_path(@user))
+    #     end
+    # end
 
     def google_login
         @user = User.find_or_initialize_by(email: auth["info"]["email"]) do |user|
             user.username = auth[:info][:first_name]
             user.email = auth[:info][:email]
             user.password = SecureRandom.hex(10)
-            user.team ||= Team.all.first
         end
         session[:user_id] = @user.id
-        if @user.new_record?
-            redirect_to(edit_user_path(@user))
-        else
-            @user.save
-            redirect_to(user_path(@user))
-        end
+        @user.new_record? ? render(:edit_user_path(User.find_by_id(params[:id])) : redirect_to(user_path(@user))
     end
 
 
