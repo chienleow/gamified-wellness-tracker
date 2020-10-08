@@ -31,9 +31,9 @@ class SessionsController < ApplicationController
                 user.email = auth[:info][:email]
                 user.password = SecureRandom.hex(10)
                 user.team = Team.all.first #sets a random team for the user first (so I won't lose @user), have user change later
-                session[:user_id] = @user.id
-                redirect_to edit_user_path(@user)
             end
+            session[:user_id] = @user.id
+            redirect_to edit_user_path(@user)
         end
     end
 
