@@ -18,13 +18,14 @@ class TeamsController < ApplicationController
     end
 
     def search
-        if params[:search_username].blank?
+        if !params[:search_username].blank?
             @search_username = params[:search_username]
             @found_username = User.all.filter_by_username(@search_username)
             @all_members = @found_username.first.team.users
             @other_members = @all_members - @found_username
         else
             @teams = Team.all
+            render :index
         end
     end
 
