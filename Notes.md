@@ -47,3 +47,10 @@ Build a search bar:
 During the next assessment:
 Be prepared to explain your refactors and implementations. This includes talking about the language(s) and libraries you’re using.
 Be prepared to work through a live coding exercise. This could be further refactors, adding a new feature, or both.
+
+
+Custom route to show the team with the most users
+1. build the button on the team page (team with the most users)
+2. build a scope in the team model (show the most users)
+3. go to team controller model, def 'most users'
+4. display it back to the most users url page

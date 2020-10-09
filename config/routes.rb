@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   post '/search' => 'teams#search'
 
+  get '/most_users' => 'teams#most_users'
+
   resources :user_goals
   resources :goals
   resources :users

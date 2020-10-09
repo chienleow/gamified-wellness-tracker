@@ -29,6 +29,10 @@ class TeamsController < ApplicationController
         end
     end
 
+    def most_users
+        @most_users = Team.all.ordered_by_most_users
+    end
+
     private
         def team_params
             params.require(:team).permit(:team_name, :search_username)
