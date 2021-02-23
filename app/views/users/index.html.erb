@@ -4,7 +4,7 @@
 
 <% @users.each do |user| %>
     <h3><%= user.username %></h3>
-    <p>Personal Points: <%= user.personal_points %></p>
+    <%# <p>Personal Points: <%= user.personal_points %></p>
     <p>Goals:</p>
     <% user.user_goals.each do |usergoal| %>
         <li><%= usergoal.notes %></li>
