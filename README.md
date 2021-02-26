@@ -6,6 +6,9 @@ How do you stay motivated remotely with your peers? How do you keep you and your
 - Back-end: [Ruby on Rails](https://rubyonrails.org/)
 - Database: [PostgreSQL](https://www.postgresql.org/)
 
+## Demo
+- [Walkthrough](https://youtu.be/uTYCEnw-izk)
+
 ## Installation
 1. Fork and clone this repository down to your local environment
 2. `cd` into the `gamified-wellness-tracker` directory
