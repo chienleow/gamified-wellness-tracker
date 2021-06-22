@@ -7,7 +7,7 @@ How do you stay motivated remotely with your peers? How do you keep you and your
 - Database: [PostgreSQL](https://www.postgresql.org/)
 
 ## Demo
-- [Walkthrough](https://youtu.be/uTYCEnw-izk)
+- [Video Walkthrough](https://youtu.be/uTYCEnw-izk)
 
 ## Installation
 1. Fork and clone this repository down to your local environment
